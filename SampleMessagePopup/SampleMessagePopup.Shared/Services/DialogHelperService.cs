@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
+using SampleMessagePopup.Interfaces;
 
 namespace SampleMessagePopup.Services
 {
     /// <summary>
     /// Helper class for showing message dialogs
     /// </summary>
-    public class DialogHelperService
+    public class DialogHelperService : IDialogHelperService
     {
         /// <summary>
         /// Shows a dialog with given message and ok/cancel buttons. 

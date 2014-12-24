@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Text;
 using PropertyChanged;
 using SampleMessagePopup.Services;
+using SampleMessagePopup.Interfaces;
 
 namespace SampleMessagePopup.ViewModels
 {
     [ImplementPropertyChanged]
     public class MainViewModel
     {
-        private readonly DialogHelperService _dialogHelperService;
+        private readonly IDialogHelperService _dialogHelperService;
 
         public string Result { get; set; }
 
-        public MainViewModel(DialogHelperService dialogHelperService)
+        public MainViewModel(IDialogHelperService dialogHelperService)
         {
             _dialogHelperService = dialogHelperService;
         }

@@ -8,6 +8,7 @@ using Caliburn.Micro;
 using SampleMessagePopup.Services;
 using SampleMessagePopup.ViewModels;
 using SampleMessagePopup.Views;
+using SampleMessagePopup.Interfaces;
 
 namespace SampleMessagePopup
 {
@@ -34,7 +35,7 @@ namespace SampleMessagePopup
 
             container.PerRequest<MainViewModel>();
 
-            container.Singleton<DialogHelperService>();
+            container.RegisterSingleton(typeof(IDialogHelperService),null, typeof(DialogHelperService));
         }
 
         protected override void PrepareViewFirst(Frame rootFrame)
